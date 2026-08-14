@@ -272,7 +272,7 @@
       <a name="facing" val="east"/>
       <a name="label" val="Op"/>
     </comp>
-    <comp lib="0" loc="(630,480)" name="Tunnel">
+    <comp lib="0" loc="(620,480)" name="Tunnel">
       <a name="label" val="B"/>
       <a name="width" val="8"/>
     </comp>
@@ -350,7 +350,7 @@
     <wire from="(520,500)" to="(520,520)"/>
     <wire from="(520,500)" to="(550,500)"/>
     <wire from="(570,520)" to="(570,550)"/>
-    <wire from="(590,480)" to="(630,480)"/>
+    <wire from="(590,480)" to="(620,480)"/>
     <wire from="(600,250)" to="(640,250)"/>
     <wire from="(600,280)" to="(610,280)"/>
     <wire from="(610,270)" to="(610,280)"/>
