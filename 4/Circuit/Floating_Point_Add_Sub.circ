@@ -228,7 +228,7 @@
       <a name="facing" val="east"/>
       <a name="label" val="Sign_A"/>
     </comp>
-    <comp lib="0" loc="(380,720)" name="Tunnel">
+    <comp lib="0" loc="(380,730)" name="Tunnel">
       <a name="facing" val="north"/>
       <a name="label" val="A_Smaller"/>
     </comp>
@@ -490,7 +490,7 @@
     <wire from="(320,670)" to="(370,670)"/>
     <wire from="(320,690)" to="(320,710)"/>
     <wire from="(320,690)" to="(370,690)"/>
-    <wire from="(380,700)" to="(380,720)"/>
+    <wire from="(380,700)" to="(380,730)"/>
     <wire from="(400,680)" to="(410,680)"/>
     <wire from="(410,320)" to="(410,360)"/>
     <wire from="(410,320)" to="(880,320)"/>
