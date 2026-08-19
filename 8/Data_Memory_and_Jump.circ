@@ -933,7 +933,7 @@
       <a name="width" val="2"/>
     </comp>
     <comp lib="0" loc="(1100,80)" name="Tunnel">
-      <a name="label" val="Load"/>
+      <a name="label" val="Write"/>
     </comp>
     <comp lib="0" loc="(120,400)" name="Constant"/>
     <comp lib="0" loc="(1320,110)" name="Tunnel">
@@ -1093,7 +1093,7 @@
     </comp>
     <comp lib="0" loc="(580,130)" name="Tunnel">
       <a name="facing" val="east"/>
-      <a name="label" val="Write"/>
+      <a name="label" val="En_Write"/>
     </comp>
     <comp lib="0" loc="(580,160)" name="Tunnel">
       <a name="facing" val="east"/>
@@ -1103,9 +1103,25 @@
       <a name="facing" val="east"/>
       <a name="label" val="Load_SR"/>
     </comp>
+    <comp lib="0" loc="(580,260)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="Mem_Inst"/>
+    </comp>
+    <comp lib="0" loc="(580,300)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="Write"/>
+    </comp>
     <comp lib="0" loc="(580,70)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="OE"/>
+    </comp>
+    <comp lib="0" loc="(590,350)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="Mem_Inst"/>
+    </comp>
+    <comp lib="0" loc="(590,390)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="Write"/>
     </comp>
     <comp lib="0" loc="(610,100)" name="Pin">
       <a name="appearance" val="NewPins"/>
@@ -1137,6 +1153,12 @@
       <a name="label" val="OE"/>
       <a name="type" val="output"/>
     </comp>
+    <comp lib="0" loc="(690,270)" name="Tunnel">
+      <a name="label" val="En_Write"/>
+    </comp>
+    <comp lib="0" loc="(690,360)" name="Tunnel">
+      <a name="label" val="En_Read"/>
+    </comp>
     <comp lib="0" loc="(780,120)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="IR"/>
@@ -1158,6 +1180,10 @@
       <a name="label" val="Opcode"/>
       <a name="width" val="2"/>
     </comp>
+    <comp lib="0" loc="(870,310)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="ALU_Inst"/>
+    </comp>
     <comp lib="0" loc="(870,70)" name="Tunnel">
       <a name="label" val="Source"/>
       <a name="width" val="3"/>
@@ -1168,6 +1194,12 @@
     </comp>
     <comp lib="0" loc="(880,130)" name="Tunnel">
       <a name="label" val="Sub"/>
+    </comp>
+    <comp lib="0" loc="(920,290)" name="Tunnel">
+      <a name="label" val="OE"/>
+    </comp>
+    <comp lib="0" loc="(920,330)" name="Tunnel">
+      <a name="label" val="Load_SR"/>
     </comp>
     <comp lib="1" loc="(1420,110)" name="NOT Gate">
       <a name="size" val="20"/>
@@ -1185,6 +1217,15 @@
       <a name="size" val="30"/>
     </comp>
     <comp lib="1" loc="(350,360)" name="AND Gate">
+      <a name="size" val="30"/>
+    </comp>
+    <comp lib="1" loc="(640,370)" name="NOT Gate">
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="1" loc="(670,270)" name="AND Gate">
+      <a name="size" val="30"/>
+    </comp>
+    <comp lib="1" loc="(680,360)" name="AND Gate">
       <a name="size" val="30"/>
     </comp>
     <comp lib="2" loc="(190,350)" name="Multiplexer">
@@ -1248,7 +1289,18 @@
     <wire from="(580,130)" to="(610,130)"/>
     <wire from="(580,160)" to="(610,160)"/>
     <wire from="(580,190)" to="(610,190)"/>
+    <wire from="(580,260)" to="(640,260)"/>
+    <wire from="(580,300)" to="(590,300)"/>
     <wire from="(580,70)" to="(610,70)"/>
+    <wire from="(590,280)" to="(590,300)"/>
+    <wire from="(590,280)" to="(640,280)"/>
+    <wire from="(590,350)" to="(650,350)"/>
+    <wire from="(590,390)" to="(600,390)"/>
+    <wire from="(600,370)" to="(600,390)"/>
+    <wire from="(600,370)" to="(620,370)"/>
+    <wire from="(640,370)" to="(650,370)"/>
+    <wire from="(670,270)" to="(690,270)"/>
+    <wire from="(680,360)" to="(690,360)"/>
     <wire from="(780,120)" to="(810,120)"/>
     <wire from="(830,110)" to="(840,110)"/>
     <wire from="(830,120)" to="(850,120)"/>
@@ -1260,5 +1312,10 @@
     <wire from="(840,100)" to="(880,100)"/>
     <wire from="(850,120)" to="(850,130)"/>
     <wire from="(850,130)" to="(880,130)"/>
+    <wire from="(870,310)" to="(900,310)"/>
+    <wire from="(900,290)" to="(900,310)"/>
+    <wire from="(900,290)" to="(920,290)"/>
+    <wire from="(900,310)" to="(900,330)"/>
+    <wire from="(900,330)" to="(920,330)"/>
   </circuit>
 </project>
