@@ -4,13 +4,9 @@
 
   <lib desc="#Wiring" name="0">
     <tool name="Splitter">
-      <a name="bit1" val="0"/>
-      <a name="bit2" val="0"/>
-      <a name="bit3" val="1"/>
-      <a name="bit4" val="1"/>
-      <a name="bit5" val="2"/>
-      <a name="fanout" val="3"/>
-      <a name="incoming" val="6"/>
+      <a name="appear" val="center"/>
+      <a name="fanout" val="8"/>
+      <a name="incoming" val="8"/>
     </tool>
     <tool name="Pin">
       <a name="appearance" val="classic"/>
@@ -62,7 +58,9 @@
     <tool lib="1" name="OR Gate"/>
     <tool lib="1" name="XOR Gate"/>
     <tool lib="1" name="NAND Gate"/>
-    <tool lib="1" name="NOR Gate"/>
+    <tool lib="1" name="NOR Gate">
+      <a name="inputs" val="8"/>
+    </tool>
     <sep/>
     <tool lib="5" name="D Flip-Flop"/>
     <tool lib="5" name="Register"/>
@@ -252,12 +250,38 @@
       <a name="facing" val="north"/>
       <a name="label" val="Op"/>
     </comp>
-    <comp lib="0" loc="(660,170)" name="Pin">
+    <comp lib="0" loc="(760,170)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="label" val="Result"/>
       <a name="type" val="output"/>
       <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(790,270)" name="Splitter">
+      <a name="appear" val="center"/>
+      <a name="fanout" val="8"/>
+      <a name="incoming" val="8"/>
+    </comp>
+    <comp lib="0" loc="(980,260)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Z"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(980,330)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="S"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(980,380)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="O"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="1" loc="(940,260)" name="NOR Gate">
+      <a name="inputs" val="8"/>
     </comp>
     <comp lib="2" loc="(650,170)" name="Multiplexer">
       <a name="width" val="8"/>
@@ -283,7 +307,29 @@
     <wire from="(590,180)" to="(590,220)"/>
     <wire from="(590,180)" to="(620,180)"/>
     <wire from="(630,190)" to="(630,200)"/>
-    <wire from="(650,170)" to="(660,170)"/>
+    <wire from="(650,170)" to="(710,170)"/>
+    <wire from="(710,170)" to="(710,270)"/>
+    <wire from="(710,170)" to="(760,170)"/>
+    <wire from="(710,270)" to="(790,270)"/>
+    <wire from="(810,220)" to="(810,230)"/>
+    <wire from="(810,220)" to="(880,220)"/>
+    <wire from="(810,240)" to="(820,240)"/>
+    <wire from="(810,250)" to="(830,250)"/>
+    <wire from="(810,260)" to="(840,260)"/>
+    <wire from="(810,270)" to="(880,270)"/>
+    <wire from="(810,280)" to="(880,280)"/>
+    <wire from="(810,290)" to="(880,290)"/>
+    <wire from="(810,300)" to="(860,300)"/>
+    <wire from="(820,230)" to="(820,240)"/>
+    <wire from="(820,230)" to="(880,230)"/>
+    <wire from="(830,240)" to="(830,250)"/>
+    <wire from="(830,240)" to="(880,240)"/>
+    <wire from="(840,250)" to="(840,260)"/>
+    <wire from="(840,250)" to="(880,250)"/>
+    <wire from="(860,300)" to="(860,330)"/>
+    <wire from="(860,300)" to="(880,300)"/>
+    <wire from="(860,330)" to="(980,330)"/>
+    <wire from="(940,260)" to="(980,260)"/>
   </circuit>
   <circuit name="Reg_File">
     <a name="appearance" val="logisim_evolution"/>
