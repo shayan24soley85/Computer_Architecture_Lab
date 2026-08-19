@@ -13,7 +13,7 @@
       <a name="appearance" val="classic"/>
     </tool>
     <tool name="Tunnel">
-      <a name="facing" val="north"/>
+      <a name="width" val="8"/>
     </tool>
     <tool name="Constant">
       <a name="width" val="8"/>
@@ -863,5 +863,205 @@
     <wire from="(940,310)" to="(980,310)"/>
     <wire from="(980,310)" to="(980,320)"/>
     <wire from="(980,320)" to="(1040,320)"/>
+  </circuit>
+  <circuit name="CU">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="CU"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(170,100)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="Z"/>
+    </comp>
+    <comp lib="0" loc="(170,130)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="S"/>
+    </comp>
+    <comp lib="0" loc="(170,160)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="O"/>
+    </comp>
+    <comp lib="0" loc="(170,190)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="Clk"/>
+    </comp>
+    <comp lib="0" loc="(170,220)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="Rst"/>
+    </comp>
+    <comp lib="0" loc="(170,70)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="C"/>
+    </comp>
+    <comp lib="0" loc="(180,40)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="IR"/>
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(210,100)" name="Tunnel">
+      <a name="label" val="Z"/>
+    </comp>
+    <comp lib="0" loc="(210,130)" name="Tunnel">
+      <a name="label" val="S"/>
+    </comp>
+    <comp lib="0" loc="(210,160)" name="Tunnel">
+      <a name="label" val="O"/>
+    </comp>
+    <comp lib="0" loc="(210,190)" name="Tunnel">
+      <a name="label" val="Clk"/>
+    </comp>
+    <comp lib="0" loc="(210,220)" name="Tunnel">
+      <a name="label" val="Rst"/>
+    </comp>
+    <comp lib="0" loc="(210,40)" name="Tunnel">
+      <a name="label" val="IR"/>
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(210,70)" name="Tunnel">
+      <a name="label" val="C"/>
+    </comp>
+    <comp lib="0" loc="(330,100)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="Clock_PC"/>
+    </comp>
+    <comp lib="0" loc="(330,130)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="Reset_PC"/>
+    </comp>
+    <comp lib="0" loc="(330,160)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="En_PC"/>
+    </comp>
+    <comp lib="0" loc="(330,190)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="Op"/>
+    </comp>
+    <comp lib="0" loc="(330,220)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="Load_IR"/>
+    </comp>
+    <comp lib="0" loc="(330,40)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="Dest"/>
+      <a name="width" val="2"/>
+    </comp>
+    <comp lib="0" loc="(330,70)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="Source"/>
+      <a name="width" val="3"/>
+    </comp>
+    <comp lib="0" loc="(360,100)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Clock_PC"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(360,130)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Reset_PC"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(360,160)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="En_PC"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(360,190)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Op"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(360,220)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Load_IR"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(360,40)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Dest"/>
+      <a name="type" val="output"/>
+      <a name="width" val="2"/>
+    </comp>
+    <comp lib="0" loc="(360,70)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Source"/>
+      <a name="type" val="output"/>
+      <a name="width" val="3"/>
+    </comp>
+    <comp lib="0" loc="(580,100)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="En_Read"/>
+    </comp>
+    <comp lib="0" loc="(580,130)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="Write"/>
+    </comp>
+    <comp lib="0" loc="(580,160)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="Clear_SR"/>
+    </comp>
+    <comp lib="0" loc="(580,190)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="Load_SR"/>
+    </comp>
+    <comp lib="0" loc="(580,70)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="OE"/>
+    </comp>
+    <comp lib="0" loc="(610,100)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="En_Read"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(610,130)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Write"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(610,160)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Clear_SR"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(610,190)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Load_SR"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(610,70)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="OE"/>
+      <a name="type" val="output"/>
+    </comp>
+    <wire from="(170,100)" to="(210,100)"/>
+    <wire from="(170,130)" to="(210,130)"/>
+    <wire from="(170,160)" to="(210,160)"/>
+    <wire from="(170,190)" to="(210,190)"/>
+    <wire from="(170,220)" to="(210,220)"/>
+    <wire from="(170,70)" to="(210,70)"/>
+    <wire from="(180,40)" to="(210,40)"/>
+    <wire from="(330,100)" to="(360,100)"/>
+    <wire from="(330,130)" to="(360,130)"/>
+    <wire from="(330,160)" to="(360,160)"/>
+    <wire from="(330,190)" to="(360,190)"/>
+    <wire from="(330,220)" to="(360,220)"/>
+    <wire from="(330,40)" to="(360,40)"/>
+    <wire from="(330,70)" to="(360,70)"/>
+    <wire from="(580,100)" to="(610,100)"/>
+    <wire from="(580,130)" to="(610,130)"/>
+    <wire from="(580,160)" to="(610,160)"/>
+    <wire from="(580,190)" to="(610,190)"/>
+    <wire from="(580,70)" to="(610,70)"/>
   </circuit>
 </project>
