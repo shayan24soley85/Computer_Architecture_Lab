@@ -16,13 +16,13 @@
     </tool>
     <tool name="Constant">
       <a name="value" val="0x0"/>
-      <a name="width" val="2"/>
+      <a name="width" val="5"/>
     </tool>
   </lib>
   <lib desc="#Gates" name="1"/>
   <lib desc="#Plexers" name="2">
     <tool name="Multiplexer">
-      <a name="width" val="2"/>
+      <a name="width" val="5"/>
     </tool>
   </lib>
   <lib desc="#Arithmetic" name="3"/>
@@ -344,10 +344,10 @@
       <a name="addrWidth" val="5"/>
       <a name="appearance" val="logisim_evolution"/>
       <a name="contents">addr/data: 5 8
-20 60 8 5 10 0 0 0
-5 5 18 40 1 60 20 1
-2 61 20 a 41 10 20 3
-25 18 9c eb fc
+20 14 5 c 20 5 0 0
+0 5 5 1c 20 1 2 32
+c 20 3 25 1c 99 4 ec
+4 20 1 25 60 fd 4
 </a>
       <a name="label" val="EPROM"/>
     </comp>
@@ -1593,10 +1593,23 @@
       <a name="label" val="Mem_Inst"/>
       <a name="type" val="output"/>
     </comp>
+    <comp lib="0" loc="(300,600)" name="Constant">
+      <a name="value" val="0x0"/>
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="0" loc="(310,650)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="Mem_Address_IR"/>
+      <a name="width" val="5"/>
+    </comp>
     <comp lib="0" loc="(360,180)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="IR"/>
       <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(360,680)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="Mem_Inst"/>
     </comp>
     <comp lib="0" loc="(390,180)" name="Splitter">
       <a name="appear" val="center"/>
@@ -1614,6 +1627,10 @@
       <a name="facing" val="east"/>
       <a name="label" val="IR"/>
       <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(410,620)" name="Tunnel">
+      <a name="label" val="Mem_Address"/>
+      <a name="width" val="5"/>
     </comp>
     <comp lib="0" loc="(420,320)" name="Tunnel">
       <a name="facing" val="east"/>
@@ -1663,7 +1680,7 @@
       <a name="label" val="Jump_Inst"/>
     </comp>
     <comp lib="0" loc="(490,430)" name="Tunnel">
-      <a name="label" val="Mem_Address"/>
+      <a name="label" val="Mem_Address_IR"/>
       <a name="width" val="5"/>
     </comp>
     <comp lib="0" loc="(500,280)" name="Tunnel">
@@ -1761,6 +1778,9 @@
       <a name="facing" val="north"/>
       <a name="size" val="30"/>
     </comp>
+    <comp lib="2" loc="(380,620)" name="Multiplexer">
+      <a name="width" val="5"/>
+    </comp>
     <comp lib="2" loc="(870,370)" name="Multiplexer">
       <a name="width" val="2"/>
     </comp>
@@ -1775,7 +1795,15 @@
     <wire from="(140,460)" to="(190,460)"/>
     <wire from="(150,280)" to="(170,280)"/>
     <wire from="(160,60)" to="(190,60)"/>
+    <wire from="(300,600)" to="(320,600)"/>
+    <wire from="(310,650)" to="(320,650)"/>
+    <wire from="(320,600)" to="(320,610)"/>
+    <wire from="(320,610)" to="(350,610)"/>
+    <wire from="(320,630)" to="(320,650)"/>
+    <wire from="(320,630)" to="(350,630)"/>
     <wire from="(360,180)" to="(390,180)"/>
+    <wire from="(360,640)" to="(360,680)"/>
+    <wire from="(380,620)" to="(410,620)"/>
     <wire from="(410,130)" to="(410,160)"/>
     <wire from="(410,130)" to="(450,130)"/>
     <wire from="(410,170)" to="(420,170)"/>
